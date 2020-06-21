@@ -3,6 +3,7 @@ import random
 from adapt.intent import IntentBuilder
 from adapt.engine import IntentDeterminationEngine
 
+#symptoms to be analysed
 symptoms = {"fever":"","cold":"","bodypain":"","tired":"","headache":"",
             "vomitation":"","stomachpain":""}
 
@@ -93,15 +94,18 @@ engine.register_intent_parser(intentstomachpain)
 
 
 def clear_symptoms():
+    """ to remove the pre assigned symptoms once prescribed"""
     global symptoms
     symptoms = {"fever":"","cold":"","bodypain":"","tired":"","headache":"",
             "vomitation":"","stomachpain":"","drycough":"","sneeze":""}
 
 def process(message,previous_msg):
+    """Mani function to use intent Deterination and to extract the proper intents"""
     intent=[]
     res = "i couldnt get you... please explain your medical symptoms..."
     print("in processing...",message,)
     
+#mainly for determination content from the user data
     for intent_detected in engine.determine_intent(message):
         print ("messages",message,"\ndetected:",intent_detected)
         if intent_detected['intent_type'] == "greetingIntent":
