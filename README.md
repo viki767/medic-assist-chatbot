@@ -26,8 +26,6 @@ open browser when both the steps are completed.
 and paste the URL :"http://localhost/chatbot/"
 My Medic assist chatbot will help you...
 
-it just made in short, always prescribe dolo 500 only, but it will instruct the necessary comments for ur problems, i only know dolo :D
-
 and a fun fact is that , its very hard to make it belive that "we are healthy" :D :D
 
 check out the demo videos...
